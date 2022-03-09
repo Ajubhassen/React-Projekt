@@ -66,9 +66,10 @@ export class DataProvider extends Component {
         return product._id === id;
       });
       this.setState({ cart: [...cart, ...data] });
-    } else {
-      alert("produkten har lagts till i varukorgen.");
-    }
+      alert("Produkten har lagts till i varukorgen.");
+      this.getTotal();
+    } 
+      
   };
 
   reduction = (id) => {
@@ -81,6 +82,7 @@ export class DataProvider extends Component {
     this.setState({ cart: cart });
     this.getTotal();
   };
+  
   increase = (id) => {
     const { cart } = this.state;
     cart.forEach((item) => {

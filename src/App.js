@@ -7,7 +7,6 @@ import { DataProvider } from './components/Context'
 import Products from "./pages/Products"
 
 
-
 class App extends React.Component{
   render(){
    return (

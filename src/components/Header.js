@@ -7,6 +7,7 @@ import { DataContext } from "./Context";
 import "../components/css/Header.css";
 import "../index.css";
 
+
 export class Header extends Component {
   static contextType = DataContext;
 
@@ -37,15 +38,19 @@ export class Header extends Component {
             </li>
 
             <li className="close" onClick={this.menuToggle}>
-              <img src={Close} alt="" width="20" />
+              <img src={Close} alt="Close" width="20" />
             </li>
           </ul>
+
           <div className="cart-basket">
             <span>{cart.length}</span>
-            <Link to="/cart">
-              <img src={Cart} alt="" width="20" />
+
+            <Link to="/Cart">
+              <img src={Cart} alt="Cart" width="20" />
             </Link>
+
           </div>
+          
         </nav>
       </header>
     );

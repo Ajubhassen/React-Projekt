@@ -1,49 +1,43 @@
-header{
-    min-height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-
-
+header {
+   min-height: 200px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   overflow: hidden;
 }
 
-
-header .logo a{
+header .logo a {
    text-decoration: none;
    text-transform: uppercase;
    color: black;
 }
-header nav{
-   display: flex;
-  
 
+header nav {
+   display: flex;
 }
-nav ul li{
+
+nav ul li {
    list-style: none;
    display: inline-block;
-
-
 }
 
-nav ul li a{
+nav ul li a {
    text-decoration: none;
    text-transform: uppercase;
    color: gray;
    padding: 0 15px;
-
-
 }
+
 nav ul li a:hover{
   color: goldenrod;
-
 }
-nav .cart-basket{
+
+nav .cart-basket {
    cursor: pointer;
    position: relative;
-
 }
-nav .cart-basket span{
+
+nav .cart-basket span {
    position: absolute;
    top: -12px;
    right: -7px;
@@ -53,12 +47,10 @@ nav .cart-basket span{
    padding: 3px 5px;
    border-radius: 50%;
    z-index: -1;
-
 }
 
 header .menu,
 header .close{
    cursor: pointer;
    display: none;
-
 }

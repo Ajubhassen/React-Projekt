@@ -10,8 +10,12 @@ export class Cart extends Component {
     this.context.getTotal();
   }
 
+
   render() {
-    const { cart, increase, reduction, removeProduct, total } = this.context;
+    
+    const { cart, increase, removeProduct, total } = this.context;
+
+
     if (cart.length === 0) {
       return (
         <h2 style={{ textAlign: "center" }}>
@@ -31,9 +35,9 @@ export class Cart extends Component {
                   <span>${item.price * item.count}</span>
                 </div>
                 <div className="amount">
-                  <button className="count" onClick={() => reduction(item._id)}>
-                    {" "}
-                    -{" "}
+                  <button className="count" onClick={() => setCount(count +1 )}> {/*(item._id)
+                    {" "}*/}
+                    -
                   </button>
                   <span>{item.count}</span>
                   <button className="count" onClick={() => increase(item._id)}>

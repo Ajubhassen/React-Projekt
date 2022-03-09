@@ -19,3 +19,12 @@ code {
   width: 100%;
   margin: 0 auto;
 }
+
+section {
+  box-shadow: 0 0 5px #ccc;
+  padding: 30px 30px;
+  width: 1000px;
+  position: relative;
+  left: 130px;
+  top: 40px
+}

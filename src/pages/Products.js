@@ -23,15 +23,18 @@ export class Products extends Component {
               </h3>
               <span>${product.price}</span>
               <p className="lager">Lagersaldo: {product.storage} kvar</p>
+
               <input
-                className="numberss"
+                className="numbers"
                 type="number"
                 id="numbers"
                 name="numbers"
               ></input>
+
               <button onClick={() => this.context.addCart(product._id)}>
                 Lägg till i varukorg
               </button>
+              
             </div>
           </div>
         ))}
