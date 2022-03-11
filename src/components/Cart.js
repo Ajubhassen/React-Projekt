@@ -29,8 +29,6 @@ render() {
                                     <span>${item.price }</span>
                                 </div>
 
-                                <p>{item.description}</p>
-                                <p>{item.content}</p>
 
                                 <div className="amount">
                                     <button className="count" onClick={() => reduction(item._id)}> - </button>
