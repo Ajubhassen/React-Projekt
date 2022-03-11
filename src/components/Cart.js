@@ -13,7 +13,7 @@ export class Cart extends Component {
 
   render() {
     
-    const { cart, increase, removeProduct, total } = this.context;
+    const { cart, increase, decrement, removeProduct, total } = this.context;
 
 
     if (cart.length === 0) {
@@ -28,6 +28,7 @@ export class Cart extends Component {
         <>
           {cart.map((item) => (
             <div className="details cart" key={item._id}>
+
               <img src={item.url} alt="" />
               <div className="box">
                 <div className="row">
@@ -35,9 +36,10 @@ export class Cart extends Component {
                   <span>${item.price * item.count}</span>
                 </div>
                 <div className="amount">
-                  <button className="count" onClick={() => setCount(count +1 )}> {/*(item._id)
-                    {" "}*/}
+                  <button className="count" onClick={() => decrement(item._id)}>
+                    {" "}
                     -
+                    {" "}
                   </button>
                   <span>{item.count}</span>
                   <button className="count" onClick={() => increase(item._id)}>

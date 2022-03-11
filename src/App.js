@@ -5,6 +5,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import { DataProvider } from './components/Context'
 import Products from "./pages/Products"
+import Section from './components/Section';
+import Cart from './components/Cart';
 
 
 class App extends React.Component{
@@ -14,6 +16,7 @@ class App extends React.Component{
         <div className="App">
           <Router>
           <Header />
+          <Section />
           <Products />
           </Router> 
         </div>

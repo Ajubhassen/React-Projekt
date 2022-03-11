@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 
 export const DataContext = React.createContext();
 
@@ -55,6 +55,7 @@ export class DataProvider extends Component {
     total: 0,
   };
 
+
   addCart = (id) => {
     const { products, cart } = this.state;
     const check = cart.every((item) => {
@@ -68,9 +69,9 @@ export class DataProvider extends Component {
       this.setState({ cart: [...cart, ...data] });
       alert("Produkten har lagts till i varukorgen.");
       this.getTotal();
-    } 
-      
+    }  
   };
+
 
   reduction = (id) => {
     const { cart } = this.state;
@@ -82,7 +83,7 @@ export class DataProvider extends Component {
     this.setState({ cart: cart });
     this.getTotal();
   };
-  
+
   increase = (id) => {
     const { cart } = this.state;
     cart.forEach((item) => {
@@ -107,13 +108,15 @@ export class DataProvider extends Component {
     }
   };
 
-  getTotal = () => {
+  /*getTotal = () => {
     const { cart } = this.state;
     const res = cart.reduce((prev, item) => {
       return prev + item.price * item.count;
     }, 0);
     this.setState({ total: res });
-  };
+  };*/
+  
+
 
   render() {
     const { products, cart, total } = this.state;
