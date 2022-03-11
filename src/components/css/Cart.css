@@ -47,3 +47,20 @@ section .cart {
     margin-right: 50px;
     color: red;
 }
+
+.count {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px 10px;
+    display: inline-block;
+    top: 60px
+}
+
+.add {
+    background-color: #333;
+    color: #ccc;
+    padding: 10px 10px;
+    display: inline-block;
+    top: 60px
+
+}

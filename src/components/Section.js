@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import Cart from '../components/Cart'
 import '../index.css';
 
+
 export class Section extends Component {
   render() {
     return (
@@ -17,7 +18,7 @@ export class Section extends Component {
           <Route path="/cart" component={Cart} exact />
           <Route path="/payment" component={Checkout} exact />
           </Routes>
-      </section>
+        </section>
     )
   }
 }
