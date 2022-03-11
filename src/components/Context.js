@@ -70,27 +70,6 @@ export class DataProvider extends Component {
     }
 };
 
-reduction = id =>{
-    const { cart } = this.state;
-    cart.forEach(item =>{
-        if(item._id === id){
-            item.count === 1 ? item.count = 1 : item.count -=1;
-        }
-    })
-    this.setState({cart: cart});
-    this.getTotal();
-};
-
-increase = id =>{
-    const { cart } = this.state;
-    cart.forEach(item =>{
-        if(item._id === id){
-            item.count += 1;
-        }
-    })
-    this.setState({cart: cart});
-    this.getTotal();
-};
 
 removeProduct = id =>{
     if(window.confirm("Vill du radera denna produkt?")){
@@ -131,11 +110,11 @@ componentDidMount(){
 }
 
 render() {
-    const {products, cart,total} = this.state;
-    const {addCart,reduction,increase,removeProduct,getTotal} = this;
+    const {products, cart, total} = this.state;
+    const {addCart, removeProduct, getTotal} = this;
     return (
         <DataContext.Provider 
-        value={{products, addCart, cart, reduction,increase,removeProduct,total,getTotal}}>
+        value={{products, addCart, cart, removeProduct, total, getTotal}}>
             {this.props.children}
         </DataContext.Provider>
     )

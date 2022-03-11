@@ -18,7 +18,7 @@ section .cart {
 }
 
 .delete {
-    position: relative;
+    position:relative;
     top:0;
     right: 5px;
     color: red;
@@ -32,6 +32,7 @@ section .cart {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-Radius: 10;
 }
 
 .total a {
@@ -54,6 +55,7 @@ section .cart {
     padding: 10px 10px;
     display: inline-block;
     top: 60px;
+    align-content: center;
 }
 
 .add {
@@ -62,5 +64,4 @@ section .cart {
     padding: 10px 10px;
     display: inline-block;
     top: 60px;
-
 }
