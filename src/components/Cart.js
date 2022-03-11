@@ -19,23 +19,25 @@ render() {
             <>
                 {
                     cart.map(item =>(
+                      
                         <div className="details cart" key={item._id}>
                             <img src={item.url} alt="bild"/>
-
                             <div className="box">
                                 <div className="row">
                                     <h2>{item.title}</h2>
-                                    <span>${item.price }</span>
+                                    <span>${item.price}</span>
+                                    
                                 </div>
 
-                                <p>{item.description}</p>
                                 <p>{item.content}</p>
+                                
 
                                 <div className="amount">
                                     <button className="count" onClick={() => reduction(item._id)}> - </button>
                                     <span>{item.count}</span>
                                     <button className="count" onClick={() => increase(item._id)}> + </button>
                                     <button className="add" onClick={item.count }>Add</button>
+                                    
                                 </div>
 
                             </div>

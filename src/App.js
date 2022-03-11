@@ -6,7 +6,6 @@ import Header from './components/Header';
 import { DataProvider } from './components/Context'
 import Products from './pages/Products'
 import Footer from './components/Footer'
-//import Section from './components/Section'
 import Details from './pages/Details';
 import Cart from './components/Cart';
 import Checkout from './pages/Checkout';

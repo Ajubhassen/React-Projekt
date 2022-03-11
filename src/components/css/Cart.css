@@ -53,7 +53,7 @@ section .cart {
     color: #ccc;
     padding: 10px 10px;
     display: inline-block;
-    top: 60px
+    top: 60px;
 }
 
 .add {
@@ -61,6 +61,6 @@ section .cart {
     color: #ccc;
     padding: 10px 10px;
     display: inline-block;
-    top: 60px
+    top: 60px;
 
 }
