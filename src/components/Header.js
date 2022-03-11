@@ -14,6 +14,7 @@ export class Header extends Component {
   state = {
     toggle: false
   }
+
   menuToggle = () => {
     this.setState({toggle: !this.state.toggle});
   }
@@ -40,6 +41,9 @@ export class Header extends Component {
             <li>
               <Link to="/">Home</Link>
             </li>
+          
+          
+          
 
             <li className="close">
               <img src={Close} alt="Close" width="20" />
@@ -50,13 +54,12 @@ export class Header extends Component {
           <div className="cart-basket" onClick={this.menuToggle}>
             <span>{cart.length}</span>
             
-            <Link to="Cart">
-              <img src={Shopping} alt="Cart" width="20"/>
+            <Link to="/cart">
+              <img src={Shopping} alt="" width="20"/>
             </Link>
             
           </div>
           
-
         </nav>
       </header>
     )

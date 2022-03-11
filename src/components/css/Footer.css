@@ -1,0 +1,52 @@
+footer{
+    min-height: 300px;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    color: white;
+    margin-top: 130px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.pay{
+        position: relative;
+        left: 190px;
+        justify-content: space-between;
+        
+       
+}
+h3{
+    margin-top: -50px;
+    margin-right: -80px;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.foot{
+    position: relative;
+    left: 110px;
+    top: -35px;
+  
+}
+.socia{
+    position: relative;
+    left: 13px;
+}
+.copy{ 
+    font-size: 17px;
+}
+p{
+  position: relative;
+  top: 120px;
+  right: 20px;
+}
+.soc{
+    position: relative;
+    left: 340px;
+}
+.redone{
+    margin-left: 15px;
+}

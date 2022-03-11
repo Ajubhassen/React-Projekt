@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 
 export const DataContext = React.createContext();
 
@@ -73,11 +73,11 @@ export class DataProvider extends Component {
   };
 
 
-  reduction = (id) => {
+  reduction = id => {
     const { cart } = this.state;
-    cart.forEach((item) => {
+    cart.forEach(item => {
       if (item._id === id) {
-        item.count === 1 ? (item.count = 1) : (item.count -= 1);
+        item.count === 1 ? item.count = 1 : item.count -= 1;
       }
     });
     this.setState({ cart: cart });
@@ -108,13 +108,13 @@ export class DataProvider extends Component {
     }
   };
 
-  /*getTotal = () => {
+  getTotal = () => {
     const { cart } = this.state;
-    const res = cart.reduce((prev, item) => {
-      return prev + item.price * item.count;
-    }, 0);
-    this.setState({ total: res });
-  };*/
+    const res = cart.reduce((prev, product) => {
+      return prev + (product.price * product.count);
+    }, 0)
+    this.setState({ total: res })
+  };
   
 
 
