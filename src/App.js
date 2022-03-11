@@ -6,7 +6,6 @@ import Header from './components/Header';
 import { DataProvider } from './components/Context'
 import Products from './pages/Products'
 import Footer from './components/Footer'
-//import Section from './components/Section'
 import Details from './pages/Details';
 import Cart from './components/Cart';
 import Checkout from './pages/Checkout';
@@ -22,9 +21,9 @@ class App extends React.Component {
               <Routes>
               <Route path="/" element={<Products/>} exact />
               <Route path="/product" element={<Products/>} exact />
-              <Route path="/product/:id" element={<Details/>}  />
+              <Route path="/product:id" Component={<Details/>} exact  />
               <Route path="/cart" element={<Cart/>} exact />
-              <Route path="/checkout" element={<Checkout/>}  />
+              <Route path="/checkout" element={<Checkout/>} exact />
               </Routes>
             <Footer />
           </Router>

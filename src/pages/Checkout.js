@@ -78,7 +78,7 @@ export class Checkout extends Component {
         <br></br>
         
 
-        <button onclick="myFunction1()" class="Nästa">Slutför</button>
+        <button onClick="myFunction1()" class="Nästa">Slutför</button>
 
 
     </div>
@@ -90,3 +90,4 @@ export class Checkout extends Component {
 }
 
 export default Checkout
+        
