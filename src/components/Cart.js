@@ -20,7 +20,7 @@ render() {
                 {
                     cart.map(item =>(
                         <div className="details cart" key={item._id}>
-                            <img src={item.src} alt=""/>
+                            <img src={item.url} alt=""/>
                             <div className="box">
                                 <div className="row">
                                     <h2>{item.title}</h2>

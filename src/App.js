@@ -22,9 +22,9 @@ class App extends React.Component {
               <Routes>
               <Route path="/" element={<Products/>} exact />
               <Route path="/product" element={<Products/>} exact />
-              <Route path="/product/:id" element={<Details/>} exact />
+              <Route path="/product/:id" component={<Details/>} exact />
               <Route path="/cart" element={<Cart/>} exact />
-              <Route path="/payment" element={<Checkout/>} exact />
+              <Route path="/checkout" element={<Checkout/>} exact />
               </Routes>
             <Footer />
           </Router>
