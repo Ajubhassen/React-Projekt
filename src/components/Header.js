@@ -13,10 +13,10 @@ export class Header extends Component {
 
   state = {
     toggle: false,
-  };
+  }
   menuToggle = () => {
-    this.setState({ toggle: !this.state.toggle });
-  };
+    this.setState({ toggle: !this.state.toggle })
+  }
 
   render() {
     const { toggle } = this.state;
@@ -28,13 +28,13 @@ export class Header extends Component {
         </div>
         <div className="logo">
           <h1>
-            <Link to="/">Footlocker 2.0</Link>
+            <Link to="/Products">Footlocker 2.0</Link>
           </h1>
         </div>
         <nav>
           <ul className={toggle ? "toggle" : ""}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/Products">Home</Link>
             </li>
 
             <li className="close" onClick={this.menuToggle}>
@@ -45,12 +45,12 @@ export class Header extends Component {
           <div className="cart-basket">
             <span>{cart.length}</span>
 
-            <Link to="/Cart">
+            <Link to="/cart">
               <img src={Cart} alt="Cart" width="20" />
             </Link>
 
           </div>
-          
+
         </nav>
       </header>
     );
