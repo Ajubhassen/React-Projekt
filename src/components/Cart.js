@@ -14,6 +14,7 @@ render() {
     const {cart,increase,reduction,removeProduct,total} = this.context;
     if(cart.length === 0){
         return <h2 style={{textAlign:"center"}}>Tom varukorg</h2>
+        
     }else{
         return (
             <>
