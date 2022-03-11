@@ -52,15 +52,9 @@ export class Header extends Component {
           
           <div className="cart-basket" onClick={this.menuToggle}>
             <span>{cart.length}</span>
-<<<<<<< HEAD
-            
-            <Link to="/cart">
-              <img src={Shopping} alt="" width="20"/>
-=======
 
             <Link to="/cart">
-              <img src={Cart} alt="Cart" width="20" />
->>>>>>> 21d97161c2a3481a69668a48e7cc147b34667108
+              <img src={Shopping} alt="Cart" width="20" />
             </Link>
             
           </div>

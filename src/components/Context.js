@@ -106,21 +106,10 @@ removeProduct = id =>{
    
 };
 
-<<<<<<< HEAD
-  getTotal = () => {
-    const { cart } = this.state;
-    const res = cart.reduce((prev, product) => {
-      return prev + (product.price * product.count);
-    }, 0)
-    this.setState({ total: res })
-  };
-  
-
-=======
-getTotal = ()=>{
+getTotal = () => {
     const{cart} = this.state;
     const res = cart.reduce((prev, item) => {
-        return prev + (item.price * item.count);
+        return prev  + (item.price );
     },0)
     this.setState({total: res})
 };
@@ -140,8 +129,6 @@ componentDidMount(){
         this.setState({total: dataTotal});
     }
 }
->>>>>>> 21d97161c2a3481a69668a48e7cc147b34667108
-
 
 render() {
     const {products, cart,total} = this.state;
