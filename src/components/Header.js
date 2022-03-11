@@ -28,13 +28,13 @@ export class Header extends Component {
         </div>
         <div className="logo">
           <h1>
-            <Link to="/Products">Footlocker 2.0</Link>
+            <Link to="/">Footlocker 2.0</Link>
           </h1>
         </div>
         <nav>
           <ul className={toggle ? "toggle" : ""}>
             <li>
-              <Link to="/Products">Home</Link>
+              <Link to="/product">Home</Link>
             </li>
 
             <li className="close" onClick={this.menuToggle}>
