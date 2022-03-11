@@ -55,59 +55,58 @@ export class DataProvider extends Component {
     total: 0,
   };
 
-
-  addCart = (id) => {
-    const { products, cart } = this.state;
-    const check = cart.every((item) => {
-      return item._id !== id;
-    });
-
-    if (check) {
-      const data = products.filter((product) => {
-        return product._id === id;
-      });
-      this.setState({ cart: [...cart, ...data] });
-      alert("Produkten har lagts till i varukorgen.");
-      this.getTotal();
-    }  
-  };
-
-
-  reduction = id => {
-    const { cart } = this.state;
-    cart.forEach(item => {
-      if (item._id === id) {
-        item.count === 1 ? item.count = 1 : item.count -= 1;
-      }
-    });
-    this.setState({ cart: cart });
-    this.getTotal();
-  };
-
-  increase = (id) => {
-    const { cart } = this.state;
-    cart.forEach((item) => {
-      if (item._id === id) {
-        item.count += 1;
-      }
-    });
-    this.setState({ cart: cart });
-    this.getTotal();
-  };
-
-  removeProduct = (id) => {
-    if (window.confirm("Vill du radera denna produkt?")) {
-      const { cart } = this.state;
-      cart.forEach((item, index) => {
-        if (item._id === id) {
-          cart.splice(index, 1);
-        }
-      });
-      this.setState({ cart: cart });
-      this.getTotal();
+  addCart = (id) =>{
+    const {products, cart} = this.state;
+    const check = cart.every(item =>{
+        return item._id !== id
+    })
+    if(check){
+        const data = products.filter(product =>{
+            return product._id === id
+        })
+        this.setState({cart: [...cart,...data]})
+    }else{
+        alert("Denna product har lagts till i varukorgen.")
     }
-  };
+};
 
+reduction = id =>{
+    const { cart } = this.state;
+    cart.forEach(item =>{
+        if(item._id === id){
+            item.count === 1 ? item.count = 1 : item.count -=1;
+        }
+    })
+    this.setState({cart: cart});
+    this.getTotal();
+};
+
+increase = id =>{
+    const { cart } = this.state;
+    cart.forEach(item =>{
+        if(item._id === id){
+            item.count += 1;
+        }
+    })
+    this.setState({cart: cart});
+    this.getTotal();
+};
+
+removeProduct = id =>{
+    if(window.confirm("Vill du radera denna produkt?")){
+        const {cart} = this.state;
+        cart.forEach((item, index) =>{
+            if(item._id === id){
+                cart.splice(index, 1)
+            }
+        })
+        this.setState({cart: cart});
+        this.getTotal();
+    }
+   
+};
+
+<<<<<<< HEAD
   getTotal = () => {
     const { cart } = this.state;
     const res = cart.reduce((prev, product) => {
@@ -117,26 +116,41 @@ export class DataProvider extends Component {
   };
   
 
+=======
+getTotal = ()=>{
+    const{cart} = this.state;
+    const res = cart.reduce((prev, item) => {
+        return prev + (item.price * item.count);
+    },0)
+    this.setState({total: res})
+};
 
-  render() {
-    const { products, cart, total } = this.state;
-    const { addCart, reduction, increase, removeProduct, getTotal } = this;
+componentDidUpdate(){
+    localStorage.setItem('dataCart', JSON.stringify(this.state.cart))
+    localStorage.setItem('dataTotal', JSON.stringify(this.state.total))
+};
 
+componentDidMount(){
+    const dataCart = JSON.parse(localStorage.getItem('dataCart'));
+    if(dataCart !== null){
+        this.setState({cart: dataCart});
+    }
+    const dataTotal = JSON.parse(localStorage.getItem('dataTotal'));
+    if(dataTotal !== null){
+        this.setState({total: dataTotal});
+    }
+}
+>>>>>>> 21d97161c2a3481a69668a48e7cc147b34667108
+
+
+render() {
+    const {products, cart,total} = this.state;
+    const {addCart,reduction,increase,removeProduct,getTotal} = this;
     return (
-      <DataContext.Provider
-        value={{
-          products,
-          addCart,
-          cart,
-          reduction,
-          increase,
-          removeProduct,
-          total,
-          getTotal,
-        }}
-      >
-        {this.props.children}
-      </DataContext.Provider>
-    );
-  }
+        <DataContext.Provider 
+        value={{products, addCart, cart, reduction,increase,removeProduct,total,getTotal}}>
+            {this.props.children}
+        </DataContext.Provider>
+    )
+}
 }

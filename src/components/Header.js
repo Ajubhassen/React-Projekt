@@ -12,11 +12,10 @@ export class Header extends Component {
   static contextType = DataContext;
 
   state = {
-    toggle: false
+    toggle: false,
   }
-
   menuToggle = () => {
-    this.setState({toggle: !this.state.toggle});
+    this.setState({ toggle: !this.state.toggle })
   }
 
   render() {
@@ -39,7 +38,7 @@ export class Header extends Component {
         <nav>
           <ul className={toggle ? "toggle" : ""}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/product">Home</Link>
             </li>
           
           
@@ -53,13 +52,19 @@ export class Header extends Component {
           
           <div className="cart-basket" onClick={this.menuToggle}>
             <span>{cart.length}</span>
+<<<<<<< HEAD
             
             <Link to="/cart">
               <img src={Shopping} alt="" width="20"/>
+=======
+
+            <Link to="/cart">
+              <img src={Cart} alt="Cart" width="20" />
+>>>>>>> 21d97161c2a3481a69668a48e7cc147b34667108
             </Link>
             
           </div>
-          
+
         </nav>
       </header>
     )
