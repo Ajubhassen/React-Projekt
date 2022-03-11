@@ -47,6 +47,7 @@ render() {
                 <div className="total">
                     <Link to="/checkout">Checkout</Link>
                     <h3>Total: ${total}</h3>
+                    <Link to="/">Go to products</Link>
                 </div>
             </>
             )
