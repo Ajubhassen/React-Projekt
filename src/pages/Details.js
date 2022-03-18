@@ -24,19 +24,8 @@ export class Details extends Component {
           this.getProduct();
         }
 
-  getProduct = () =>{
-      if(this.props.match.params.id){
-          const res = this.context.products;
-          const data = res.filter(item =>{
-              return item._id === this.props.match.params.id
-          })
-          this.setState({product: data})
-      }
-  };
 
-  componentDidMount(){
-      this.getProduct();
-    }
+  
 
 
   render() {
