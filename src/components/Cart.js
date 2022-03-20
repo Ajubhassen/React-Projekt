@@ -15,7 +15,7 @@ render() {
     if(cart.length === 0){
         return <div className="total" >
          <h2 style={{textAlign:"center"}}>Tom varukorg</h2>
-        <Link to="/" style={{borderRadius: 10}}>Products</Link>
+        <Link to="/" style={{borderRadius: 10}}>Gå tillbaka till shopping sidan!</Link>
         </div>
     }else{
         return (

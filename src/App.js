@@ -18,16 +18,16 @@ class App extends React.Component {
         <div className="app">
           <Router>
             <Header />
-              <Routes>
-              <Route path="/" element={<Products/>} exact />
-              <Route path="/product" element={<Products/>} exact />
-              <Route path="/product/:id"  component={<Details/>} exact />
-              <Route path="/cart" element={<Cart/>} exact />
-              <Route path="/checkout" element={<Checkout/>} exact />
-              </Routes>
+            <Routes>
+              <Route path="/" element={<Products />} exact />
+              <Route path="/product" element={<Products />} exact />
+              <Route path="/product/:id" element={<Details />} exact />
+              <Route path="/cart" element={<Cart />} exact />
+              <Route path="/checkout" element={<Checkout />} exact />
+            </Routes>
             <Footer />
           </Router>
-          
+
         </div>
       </DataProvider>
     );
